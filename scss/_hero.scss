@@ -1,0 +1,26 @@
+.hero{
+  text-align: center;
+  padding: 6em 0 2em;
+  background: url("../images/bg-header-mobile.png") no-repeat;
+
+  &__content{
+    max-width: 650px;
+
+    @include breakpoint(large){
+      max-width: 675px;
+    }
+
+    @include breakpoint(extra-large){
+      max-width: 825px;
+    }
+  }
+
+  &__logo{
+    margin-bottom: 1rem;
+  }
+
+  @include breakpoint(small){
+    background: url("../images/bg-header-desktop.png") repeat-x;
+  }
+}
+

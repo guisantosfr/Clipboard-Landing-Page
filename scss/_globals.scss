@@ -1,0 +1,45 @@
+html{
+  box-sizing: border-box;
+
+  @include breakpoint(large){
+    font-size: 1.125rem;
+  }
+
+  @include breakpoint(extra-large){
+    font-size: 1.375rem;
+  }
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+h1, h2, h3{
+  color: $dark-grayish-blue;
+}
+
+p{
+  color: $grayish-blue;
+  font-size: 1.1rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+}
+
+button{
+  border: none;
+  cursor: pointer;
+  font-family: 'Bai Jamjuree', sans-serif;
+}
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
