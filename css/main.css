@@ -25,17 +25,22 @@ h1, h2, h3 {
   color: #4c545d;
 }
 
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
 p {
   color: #9fabb2;
   font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
-}
-
-img {
-  max-width: 100%;
 }
 
 button {
@@ -45,34 +50,47 @@ button {
 }
 
 .container {
-  width: 90%;
   margin: 0 auto;
 }
 
-.hero {
-  text-align: center;
-  padding: 6em 0 2em;
-  background: url("../images/bg-header-mobile.png") no-repeat;
+@media (max-width: 720px) {
+  .container {
+    width: 90%;
+  }
 }
 
-.hero__content {
-  max-width: 650px;
+@media (min-width: 720px) {
+  .content {
+    max-width: 650px;
+  }
 }
 
 @media (min-width: 1024px) {
-  .hero__content {
+  .content {
     max-width: 675px;
   }
 }
 
 @media (min-width: 1440px) {
-  .hero__content {
+  .content {
     max-width: 825px;
   }
 }
 
+.hero {
+  text-align: center;
+  padding: 7em 0;
+  background: url("../images/bg-header-mobile.png") no-repeat;
+}
+
 .hero__logo {
   margin-bottom: 1rem;
+}
+
+@media (min-width: 720px) {
+  .hero__title {
+    font-size: 2.4rem;
+  }
 }
 
 @media (min-width: 375px) {
@@ -87,7 +105,7 @@ button {
   border-radius: 30px;
   font-size: 1rem;
   letter-spacing: .75px;
-  margin: .5rem;
+  margin: .75rem;
 }
 
 .button--ios {
@@ -106,10 +124,74 @@ button {
   opacity: .7;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 720px) {
   .button {
     padding: 1em 2em;
     margin: 2em .5em;
   }
+}
+
+.features {
+  text-align: center;
+  padding-bottom: 10em;
+}
+
+.features .about {
+  margin: 0 auto 4rem;
+  max-width: 700px;
+}
+
+@media (min-width: 1440px) {
+  .features .about {
+    max-width: 975px;
+  }
+}
+
+.features__image {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 720px) {
+  .features__image {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .features__image {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 7;
+    grid-column: 1 / 8;
+    max-width: 800px;
+    position: relative;
+    right: 5%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .features__grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[14];
+        grid-template-columns: repeat(14, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .features__list {
+    -ms-grid-column: 9;
+    -ms-grid-column-span: 5;
+    grid-column: 9 / 14;
+    text-align: left;
+  }
+}
+
+.features .feature:first-child {
+  margin-top: 1rem;
+}
+
+.features .feature + .feature {
+  margin: 2rem auto;
 }
 /*# sourceMappingURL=main.css.map */

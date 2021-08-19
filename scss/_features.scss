@@ -1,0 +1,58 @@
+.features{
+  text-align: center;
+  padding-bottom: 10em;
+
+  .about{
+    margin: 0 auto 4rem;
+    max-width: 700px;
+
+    @include breakpoint(extra-large){
+      max-width: 975px;
+    }
+  }
+
+  &__image{
+    max-width: 700px;
+    margin: 0 auto;
+
+    @include breakpoint-down(medium){
+      width: 100%;
+    }
+
+    @include breakpoint(extra-large){
+      grid-column: 1 / 8;
+      max-width: 800px;
+
+      position: relative;
+      right: 5%;
+    }
+
+  }
+
+  &__grid{
+    @include breakpoint(extra-large){
+      display: grid;
+      grid-template-columns: repeat(14, 1fr);
+    }
+  }
+
+  &__list{
+    @include breakpoint(extra-large){
+      grid-column: 9 / 14;
+      text-align: left;
+    }
+  }
+
+  .feature{
+    &:first-child{
+      margin-top: 1rem;
+    }
+
+    &+.feature{
+      margin: 2rem auto;
+    }
+  }
+
+}
+
+

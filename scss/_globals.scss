@@ -20,17 +20,22 @@ h1, h2, h3{
   color: $dark-grayish-blue;
 }
 
+h2{
+  font-size: 1.8rem;
+}
+
+h3{
+font-size: 1.6rem;
+}
+
 p{
   color: $grayish-blue;
   font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 a{
   text-decoration: none;
-}
-
-img{
-  max-width: 100%;
 }
 
 button{
@@ -40,6 +45,24 @@ button{
 }
 
 .container{
-  width: 90%;
   margin: 0 auto;
+
+  @include breakpoint-down(medium){
+    width: 90%;
+  }
+}
+
+.content{
+
+  @include breakpoint(medium){
+    max-width: 650px;
+  }
+
+  @include breakpoint(large){
+    max-width: 675px;
+  }
+
+  @include breakpoint(extra-large){
+    max-width: 825px;
+  }
 }
