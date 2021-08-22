@@ -12,12 +12,12 @@
 
   &--ios{
     background-color: $strong-cyan;
-    box-shadow: 0 5px 2px box-shadow-color($strong-cyan);
+    box-shadow: -1px 6px 2px box-shadow-color($strong-cyan);
   }
 
   &--mac{
     background-color: $light-blue;
-    box-shadow: 0 5px 2px box-shadow-color($light-blue);
+    box-shadow: -1px 6px 2px box-shadow-color($light-blue);
   }
 
   &:hover{

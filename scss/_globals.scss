@@ -44,16 +44,19 @@ button{
   font-family: 'Bai Jamjuree', sans-serif;
 }
 
+section{
+  padding-bottom: 10em;
+}
+
 .container{
   margin: 0 auto;
 
-  @include breakpoint-down(medium){
+  @include breakpoint-down(large){
     width: 90%;
   }
 }
 
 .content{
-
   @include breakpoint(medium){
     max-width: 650px;
   }
@@ -65,4 +68,8 @@ button{
   @include breakpoint(extra-large){
     max-width: 825px;
   }
+}
+
+.w-100{
+  width: 100%;
 }

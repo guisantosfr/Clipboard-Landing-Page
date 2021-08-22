@@ -1,6 +1,5 @@
 .features{
   text-align: center;
-  padding-bottom: 10em;
 
   .about{
     margin: 0 auto 4rem;
@@ -13,11 +12,6 @@
 
   &__image{
     max-width: 700px;
-    margin: 0 auto;
-
-    @include breakpoint-down(medium){
-      width: 100%;
-    }
 
     @include breakpoint(extra-large){
       grid-column: 1 / 8;
@@ -43,14 +37,8 @@
     }
   }
 
-  .feature{
-    &:first-child{
-      margin-top: 1rem;
-    }
-
-    &+.feature{
-      margin: 2rem auto;
-    }
+  .feature + .feature{
+    margin-top: 2rem;
   }
 
 }
