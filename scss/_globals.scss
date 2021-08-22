@@ -50,10 +50,7 @@ section{
 
 .container{
   margin: 0 auto;
-
-  @include breakpoint-down(large){
-    width: 90%;
-  }
+  width: 90%;
 }
 
 .content{

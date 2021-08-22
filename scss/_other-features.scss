@@ -1,0 +1,32 @@
+.other-features{
+  text-align: center;
+
+  &__paragraph{
+    margin-bottom: 2rem;
+  }
+
+  .cards{
+    @include breakpoint(large){
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: baseline;
+    }
+  }
+
+  .card{
+    padding-top: 3em;
+    max-width: 375px;
+    margin: 0 auto;
+
+    @include breakpoint(medium){
+      max-width: 450px;
+    }
+
+    &__image{
+      padding-bottom: 1em;
+    }
+
+  }
+}
+
+// 375px
