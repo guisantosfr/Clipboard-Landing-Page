@@ -1,5 +1,6 @@
 .clipboard{
   text-align: center;
+  padding-bottom: 3em;
 
   &__devices{
     max-width: 800px;
@@ -8,7 +9,7 @@
       max-width: 900px;
     }
 
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   & > .container{
