@@ -366,22 +366,44 @@ ul {
   text-align: center;
 }
 
-.footer__nav li {
-  margin: 1.5em auto;
-}
-
-@media (min-width: 1024px) {
+@media (min-width: 720px) {
   .footer__nav {
     text-align: left;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 4rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 375px;
+    margin-left: 2rem;
   }
 }
 
-.footer__social a {
+@media (min-width: 1024px) {
+  .footer__nav {
+    max-width: 575px;
+  }
+}
+
+.footer__nav li {
+  margin: 1.5em 1em;
+}
+
+@media (min-width: 720px) {
+  .footer__nav li {
+    width: calc(100% / 3);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer__nav li {
+    width: calc(100% / 4);
+  }
+}
+
+.footer__social li {
   margin: 1em;
+  display: inline;
 }
 
 .footer__social img {

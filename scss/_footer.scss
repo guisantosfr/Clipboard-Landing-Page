@@ -28,21 +28,37 @@
   &__nav{
     text-align: center;
 
-    li{
-      margin: 1.5em auto;
-    }
-
-    @include breakpoint(large){
+    @include breakpoint(medium){
       text-align: left;
 
       display: flex;
-      gap: 4rem;
+      flex-wrap: wrap;
+
+      max-width: 375px;
+      margin-left: 2rem;
+    }
+
+    @include breakpoint(large){
+      max-width: 575px;
+    }
+
+    li{
+      margin: 1.5em 1em;
+
+      @include breakpoint(medium){
+        width: calc(100% / 3);
+      }
+
+      @include breakpoint(large){
+        width: calc(100% / 4);
+      }
     }
   }
 
   &__social{
-    a{
+    li{
       margin: 1em;
+      display: inline;
     }
 
     img{
